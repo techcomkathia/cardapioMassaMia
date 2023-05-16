@@ -24,7 +24,7 @@ main {
      
 }
 
-header {
+header {    
     background-color:var(--corBackground);
     color: var(--corFontes);
     padding: 10px;
@@ -54,10 +54,14 @@ nav a:hover {
     color:var(--corBackground);
 }
 
-section {
+section{
+    display: flex;
+    flex-direction:column; 
+    /* flex-wrap: wrap; */
     padding: 20px;
     background-color:var(--corBackgroundSection);
 }
+
 
 h2 {
     color: var(--corBackground);
@@ -67,6 +71,10 @@ h2 {
 }
 
 ul {
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    justify-content: center;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -75,17 +83,21 @@ ul {
 }
 
 li {
-    margin: 20px auto;
-    width: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+    max-width: 250px;
     background-color: white;
     border-radius: 10px;
     padding: 10px;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
-    text-align: center;
+    
 }
 
 li img {
-    width: 750px;
+    width: 300px;
     max-width: 100%;
     height: auto;
     border-radius: 10px;
@@ -114,28 +126,17 @@ footer {
     background-color:var(--corBackground);
     color:var(--corFontes);
     padding: 20px;
-    text-align: center;  
+    display: flex; 
+    justify-content: center;
+    align-items: center;
 }
 
 footer div{
-    display: inline-block;
-    padding: 0px 10px;
+    margin: 0 20px;
     text-align: center;
 }
 
-
-.contatos{
-    position: relative; 
-    bottom: 10px; 
-}
-
-.redesSociais{
-    position: relative;
-    margin: 0px 50px;
-    top: 20px;
-}
-
-.redesSociais img{
+footer img{
     height: 30px ;
     margin: 10px;
 }
